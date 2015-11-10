@@ -4,7 +4,7 @@ require 'json'
 
 
 def input
-	puts"Movie title:"
+	puts"Enter the Movie title:"
 	movie_name=gets.chomp
 	movie_name=movie_name.split(" ").join("+")
 	return movie_name
@@ -75,8 +75,8 @@ def generate_page movie_name
 	html_file.puts("</table>")
 	html_file.puts("</body>")
 	html_file.puts("</html>")
-
 	html_file.close
+	puts "Html page has been generated in "+Dir.getwd+" as movie_detail.html"
 end
 
 
