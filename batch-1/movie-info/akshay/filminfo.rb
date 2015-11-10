@@ -16,7 +16,7 @@ def generate_page movie_name
 	content_hash=JSON.parse(content)
 	html_file=File.new("movie_detail.html","w")
 	layout=File.read('Page_layout.txt')
-	layout=layout.split("`")
+	layout=layout.split("\n")
 	layout.each do |n|
 		html_file.puts(n)
 	end
