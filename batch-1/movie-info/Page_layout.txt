@@ -1,0 +1,14 @@
+<!DOCTYPE html>`
+<head>`
+	<title>#{content_hash["Title"]}</title>`
+</head>`
+
+<body style=background-color:#59B791>`
+	<h1 style=text-align:center> #{content_hash["Title"]} </h1>`
+	<IMG SRC=#{content_hash["Poster"]}>`
+	<h2>Genre:#{content_hash["Genre"]}</h2>`
+	<h2>Actors:#{content_hash["Actors"]}</h2>`
+	<p>Plot:#{content_hash["Plot"]}</p>`
+	<h4>IMDB Rating:#{content_hash["imdbRating"]}</h4>`
+</body>`
+</html>`
