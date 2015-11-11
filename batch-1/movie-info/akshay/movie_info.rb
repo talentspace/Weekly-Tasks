@@ -8,10 +8,9 @@ def input
 	puts"Enter the Movie title:"
 	movie_name=gets.chomp
 	movie_name=movie_name.split(" ").join("+")
-	return movie_name
 end
 
-def generate_page movie_name
+def generate_page (movie_name)
 	movie_url= "http://www.omdbapi.com/?t=#{movie_name}&y=&plot=short&r=json"
 	content = open(movie_url).read
 	content_hash=JSON.parse(content)
