@@ -6,25 +6,36 @@
 <style>
 
 body{
-background-color:#C4BBF0;
 margin-top:-20px;
 }
 
-table td{
-style=width:100%;
+table, td{
+color: white;
 font-family:'Open Sans',sans-serif;font-size:16px;
-border-collapse: collapse;
-border: 2px solid #363B4E;
+border: 2px solid white;
 text-align:center;
+border-collapse: collapse;
 }
-</style>
 
+#light{
+	background-color: #DDDDC7; 
+	margin-top:-25px
+}
+
+#dark{
+	background-color: #243D44;
+}
+
+</style>
 </head>
 <body>
-	<h1 style="position:relative;background-color:#241023;text-align:center;padding-top:25px;padding-bottom:25px;font-family:'Poppins',sans-serif;color:#FFBF00")>Movie Database</h1>
-	<img style="padding-left:40%;" src= {{Poster}} />
-	<br/><br/>
-	<table style="padding-left:25%;padding-right:25%">
+	<h1 style="position:relative;background-color:#243D44;text-align:center;padding-top:25px;padding-bottom:25px;font-family:'Poppins',sans-serif;color:white")>Movie Database</h1>
+	<div id="light">
+	<img style="padding-left:40%;padding-top:25px;padding-bottom:25px" src= {{Poster}} />
+	<div/>
+	<div id="dark">
+	<br/><br/><br/>
+	<table style="margin-left:200px;">
 		<tr>
 			<td><h2>Title:</td><td> {{Title}} </h2></td>
 		</tr>
@@ -59,5 +70,7 @@ text-align:center;
 		<td><h2>Metascore:</td><td> {{Metascore}} </h2></td>
 	</tr>
 	</table>
+	<div/>
+	<br/><br/><br/>
 </body>
 </html>
