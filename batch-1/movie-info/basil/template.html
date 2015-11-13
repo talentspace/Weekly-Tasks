@@ -1,0 +1,71 @@
+!DOCTYPE html>
+<head>
+<title> {{Title}} </title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+<style>
+body{
+margin-top:-20px;
+}
+table, td{
+color: white;
+font-family:'Open Sans',sans-serif;font-size:16px;
+border: 2px solid white;
+text-align:center;
+border-collapse: collapse;
+}
+#light{
+	background-color: #DDDDC7; 
+	margin-top:-25px
+}
+#dark{
+	background-color: #243D44;
+}
+</style>
+</head>
+<body>
+	<h1 style="position:relative;background-color:#243D44;text-align:center;padding-top:25px;padding-bottom:25px;font-family:'Poppins',sans-serif;color:white")>Movie Database</h1>
+	<div id="light">
+	<img style="padding-left:40%;padding-top:25px;padding-bottom:25px" src= {{Poster}} />
+	<div/>
+	<div id="dark">
+	<br/><br/><br/>
+	<table style="margin-left:200px;">
+		<tr>
+			<td><h2>Title:</td><td> {{Title}} </h2></td>
+		</tr>
+	<tr>
+		<td><h2>Released:</td><td> {{Released}} </h2></td>
+	</tr>
+	<tr>
+		<td><h2>Genre:</td><td> {{Genre}} </h2></td>
+	</tr>
+	<tr>
+		<td><h2>Runtime:</td><td> {{Runtime}} </h2></td>
+	</tr>
+	<tr>
+		<td><h2>Language:</td><td> {{Language}} </h2></td>
+	</tr>
+	<tr>
+		<td><h2>Writer:</td><td> {{Writer}} </h2></td>
+	</tr>
+	<tr>
+		<td><h2>Actors:</td><td> {{Actors}} </h2></td>
+	</tr>
+	</tr>
+		<td><h2>Plot:<h2></td><td style="word-wrap:break-word"> {{Plot}} </td>
+	</tr>
+	<tr>
+		<td><h2>Awards:</td><td> {{Awards}} </h2></td>
+	</tr>
+	<tr>
+		<td><h2>IMDB Rating & votes:<h2></td><td> {{imdbRating}} , {{imdbVotes}} </td>
+	</tr>
+	<tr>
+		<td><h2>Metascore:</td><td> {{Metascore}} </h2></td>
+	</tr>
+	</table>
+	<div/>
+	<br/><br/><br/>
+</body>
+</html>
