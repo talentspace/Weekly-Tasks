@@ -28,12 +28,9 @@ repace_list       = ["{{Title}}","{{Poster}}","{{Genre}}","{{Actors}}","{{Plot}}
 template_read.each_with_index do |template_line,index_1|
 	repace_list.each_with_index do |replace_element,index_2|
 		if template_line.include? replace_element
-			template_add_data=template_add_data.gsub(replace_element,data[index_2])		
+			template_add_data=template_add_data.gsub(replace_element,data[index_2])
 		end
-	end		
+	end
 end
 html_file.puts(template_add_data)
 html_file.close
-
-
-
