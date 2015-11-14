@@ -2,8 +2,6 @@
 require 'open-uri'
 require 'json'
 
-
-
 def input()
 	puts"Enter the Movie title:"
 	movie_name=gets.chomp
