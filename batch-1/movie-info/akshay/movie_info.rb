@@ -9,8 +9,11 @@ end
 
 def generate_page (movie_name)
 	movie_url= "http://www.omdbapi.com/?t=#{movie_name}&y=&plot=short&r=json"
+	trailer_url= "http://trailersapi.com/trailers.json?movie=#{movie_name}&limit=1&width=320"
 	content = open(movie_url).read
+	trailer = open(trailer_url).read
 	content_hash=JSON.parse(content)
+	trailer_hash=JSON.parse(trailer)
 	html_file=File.new("movie_details.html","w")
 	movie_details=File.read("template.html")
 	n=Array['{{Poster}}','{{Title}}','{{Released}}','{{Genre}}','{{Runtime}}','{{Language}}','{{Writer}}','{{Actors}}','{{Plot}}','{{Awards}}','{{imdbRating}}','{{imdbVotes}}','{{Metascore}}']
@@ -18,6 +21,7 @@ def generate_page (movie_name)
 	for i in 0..12
  	movie_details=movie_details.gsub(n[i],content_hash[p[i]])
 	end
+	movie_details=movie_details.gsub("{{Trailer}}",trailer_hash[0]["code"])
 	html_file.puts(movie_details)
 	puts "Html page has been generated in "+Dir.getwd+" as movie_details.html"
 end
