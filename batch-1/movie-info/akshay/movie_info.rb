@@ -4,7 +4,7 @@ require 'json'
 
 
 
-def input
+def input()
 	puts"Enter the Movie title:"
 	movie_name=gets.chomp
 	movie_name=movie_name.split(" ").join("+")
