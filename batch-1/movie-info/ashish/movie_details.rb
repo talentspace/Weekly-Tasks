@@ -16,9 +16,9 @@ template_add_data=File.read("template.html")
 template_read=template_add_data.split("\n")
 data=[content_hash["Title"],content_hash["Poster"],content_hash["Genre"],content_hash["Actors"],content_hash["Plot"],content_hash["imdbRating"]]
 repace_list=["{{Title}}","{{Poster}}","{{Genre}}","{{Actors}}","{{Plot}}","{{imdbRating}}"]
-template_read.each_index do |i|
+template_read.each do |i|
 	repace_list.each_index do |j|
-		if template_read[i].include? repace_list[j]
+		if i.include? repace_list[j]
 
 			template_add_data=template_add_data.gsub(repace_list[j],data[j])
 		end
