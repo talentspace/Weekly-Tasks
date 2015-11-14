@@ -19,9 +19,13 @@ def generate_page (movie_name)
 	n=Array['{{Poster}}','{{Title}}','{{Released}}','{{Genre}}','{{Runtime}}','{{Language}}','{{Writer}}','{{Actors}}','{{Plot}}','{{Awards}}','{{imdbRating}}','{{imdbVotes}}','{{Metascore}}']
 	p=Array['Poster','Title','Released','Genre','Runtime','Language','Writer','Actors','Plot','Awards','imdbRating','imdbVotes','Metascore']
 	for i in 0..12
- 	movie_details=movie_details.gsub(n[i],content_hash[p[i]])
+ 		movie_details=movie_details.gsub(n[i],content_hash[p[i]])
 	end
-	movie_details=movie_details.gsub("{{Trailer}}",trailer_hash[0]["code"])
+	if(trailer_hash!=[])
+		movie_details=movie_details.gsub("{{Trailer}}",trailer_hash[0]["code"])
+	else
+		movie_details=movie_details.gsub("{{Trailer}}","Trailer not found")
+	end
 	html_file.puts(movie_details)
 	puts "Html page has been generated in "+Dir.getwd+" as movie_details.html"
 end
