@@ -14,8 +14,8 @@ content_hash = JSON.parse(content)
 
 #Check whether the entered movie name is valid
 if content_hash["Response"]=="False"
-	puts 'Please enter a valid movie name.'
-	exit(0)
+  puts 'Please enter a valid movie name.'
+  exit(0)
 end
 
 #Code for creating the html page from the input
@@ -26,11 +26,11 @@ data              = [content_hash["Title"],content_hash["Poster"],content_hash["
 repace_list       = ["{{Title}}","{{Poster}}","{{Genre}}","{{Actors}}","{{Plot}}","{{imdbRating}}"]
 
 template_read.each_with_index do |template_line,index_1|
-	repace_list.each_with_index do |replace_element,index_2|
-		if template_line.include? replace_element
-			template_add_data=template_add_data.gsub(replace_element,data[index_2])
-		end
-	end
+  repace_list.each_with_index do |replace_element,index_2|
+    if template_line.include? replace_element
+      template_add_data=template_add_data.gsub(replace_element,data[index_2])
+    end
+  end
 end
 html_file.puts(template_add_data)
 html_file.close
