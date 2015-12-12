@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{Title}}</title>
+  <link rel="shortcut icon" href="{{Poster}}" />
+  <style type="text/css">
+    header {
+      border-bottom: 1px solid #e00;
+    }
+
+    .poster {
+      float: left;
+      position: relative;
+    }
+
+    .poster img {
+      height: 200px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    .content {
+      display: inline;
+    }
+
+    .movie-information .info {
+      margin-left: 10px;
+    }
+
+    .movie-information .info h5, .movie-information .info p {
+      display: inline;
+      line-height: 30px;
+    }
+
+    body {
+      background-color: #eee;
+    }
+
+    .container {
+      margin: 30px 200px;
+      background-color: white;
+      border-radius: 5px;
+      padding: 20px 20px 20px 20px;
+    }
+
+    .movie-information {
+      margin: 30px 0px 100% 160px;
+      background-color: rgba(238, 238, 238, 0.35);
+      border-radius: 5px;
+      padding: 20px 20px 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>{{Title}}</h1>
+    </header>
+
+    <div class="content">
+      <div class="poster">
+        <img src="{{Poster}}">
+      </div>
+
+      <div class="movie-information">
+        <p>{{Plot}}</p>
+
+        <div class="info">
+          <h5>AUTHOR</h5>
+          <p>{{Director}}</p>
+        </div>
+
+        <div class="info">
+          <h5>YEAR</h5>
+          <p>{{Year}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
